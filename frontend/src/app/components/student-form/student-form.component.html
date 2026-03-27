@@ -1,0 +1,8 @@
+<h2>{{studentId ? 'Edit' : 'Add'}} Student</h2>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label>Name:</label>
+  <input formControlName="name">
+  <label>Email:</label>
+  <input formControlName="email">
+  <button type="submit">Save</button>
+</form>

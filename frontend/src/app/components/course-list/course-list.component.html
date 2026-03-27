@@ -1,0 +1,17 @@
+<h2>Courses</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let c of courses">
+    <td>{{c.name}}</td>
+    <td>{{c.email}}</td>
+    <td>
+      <button [routerLink]="['/courses-form', c.id]">Edit</button>
+      <button (click)="delete(c.id)">Delete</button>
+    </td>
+  </tr>
+</table>
+<button [routerLink]="['/courses-form']">Add Course</button>
